@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link de google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Link de SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Link archivo de CSS -->
+    <link rel="stylesheet" href="main.css">
+    <title>PreEntrega 2</title>
+</head>
+<body>
+    <main class="contenedor">
+        <h1 class="titulo-pagina">Programa Control de Inventario</h1>
+
+        <!-- Botones para correr las funciones -->
+        <div class="botones">
+            <button id="boton-agregar">Agregar Producto</button>
+            <button id="boton-actualizar">Actualizar Producto</button>
+            <button id="boton-eliminar">Eliminar Producto</button>
+            <button id="boton-mostrar">Mostrar Productos</button>
+        </div>
+
+        <div class="botones2">
+            <button id="boton-gastos">Mostrar Total Gastado y Posibles ganancias</button>
+            <button id="boton-vender">Vender Productos</button>
+        </div>
+        
+        <!-- Mensajes dentro del html -->
+        <div class="textos">
+            <p>La cantidad total de productos es: <span id="productos-total"></span></p>
+            <p>El stock total de los productos es: <span id="stock-total"></span></p>
+        </div>
+    </main>
+
+    <!-- Link al script de js -->
+    <script src="app.js"></script>
+</body>
+</html>
