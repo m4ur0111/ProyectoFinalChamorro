@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link de estilos CSS -->
+    <link rel="stylesheet" href="../css/gastos.css">
+    <title>Gastos y Ganancias</title>
+</head>
+<body>
+
+    <h1 class="titulo">Ganancia Esperada por Producto</h1>
+
+    <div class="contenedor-tabla">
+        <table>
+            <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Ganancias Esperadas</th>
+            </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas de la tabla se agregarán dinámicamente utilizando JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="textos">
+        <p>La ganancia total esperada entre todos los productos es de: <span id="ganancia-total"></span></p>
+        <p>El gasto total entre todos los productos es de: <span id="gasto-total"></span></p>
+        <p>La ganancia real esperada descontando el total gastado es: <span id="ganancia-real"></span></p>
+    </div>
+
+    <div class="volver-a">
+        <a href="../index.html">Volver</a>
+    </div>
+
+    <!-- Link del archivo script -->
+    <script src="../js/ganancias.js" type="module"></script>
+</body>
+</html>

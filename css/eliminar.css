@@ -8,26 +8,26 @@ body{
     background-image:  radial-gradient(#868686 1.4500000000000002px, transparent 1.4500000000000002px), radial-gradient(#868686 1.4500000000000002px, #ffffff 1.4500000000000002px);
     background-size: 58px 58px;
     background-position: 0 0,29px 29px;
+    text-align: center;
 }
 
-
-.titulo-pagina{
-    font-size: 52px;
-    text-align: center;
+h1{
+    font-size: 40px;
     font-weight: 300;
     margin-top: 100px;
 }
 
-.botones{
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2.5rem;
+.contenedor-botones{
+    padding: 0rem 3rem 3rem 3rem;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
 }
 
-.botones button{
+.boton-producto{
     padding: 1.5rem;
+    margin: 2rem;
+    width: 180px;
     border-radius: 12px;
     font-size: 18px;
     border: none;
@@ -36,25 +36,17 @@ body{
     cursor: pointer;
 }
 
-.botones2{
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2.5rem;
-}
-
-.botones2 button{
+.boton-inicio{
+    background-image: linear-gradient(to right bottom, #0a47a1, #0079be, #00a2b0, #4bc494, #c4de8a);
     padding: 1.5rem;
+    width: 190px;
     border-radius: 12px;
     font-size: 18px;
     border: none;
-    background: rgb(129,171,44);
-    background: linear-gradient(90deg, rgba(129,171,44,0.7819502801120448) 0%, rgba(139,168,80,0.7819502801120448) 100%);
     cursor: pointer;
 }
 
-.textos{
-    text-align: center;
-    font-size: 24px;
+.boton-inicio a{
+    text-decoration: none;
+    color: black;
 }

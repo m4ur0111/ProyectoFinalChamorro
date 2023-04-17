@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link de Bootstrap5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- Link de google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Link de SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Link archivo de CSS -->
+    <link rel="stylesheet" href="../../css/actualizar.css">
+    <title>Actualizar Producto</title>
+</head>
+<body>
+
+    <h1 class="titulo">Actualizar Producto</h1>
+
+    <p>El producto a actualizar es: <span class="texto-variable" id="productos-actualizar"></span></p>
+    <p>El stock actual del producto es: <span class="texto-variable" id="stock-actualizar"></span></p>
+    <p>El porcentaje de ganancia actual de producto es: <span class="texto-variable" id="porcentaje-actualizar"></span>%</p>
+
+    <div class="contenedor-formulario">
+        <form class="formulario" id="formulario-actualizar">
+            <div class="form-floating mb-3">
+                <input type="number" id="stock" class="form-control" placeholder="Stock del Producto" min="1">
+                <label for="floatingInput">Nuevo stock del Producto (unidades)</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="number" id="porcentaje" class="form-control" placeholder="Porcentaje de venta" min="0">
+                <label for="floatingInput">Nuevo porcentaje de ganancia esperado:</label>
+            </div>
+            <div class="contenedor-botones">
+                <a href="./botones-actualizar.html">Volver</a>
+                <button id="boton-actualizar" type="submit">Actualizar Producto</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Link al script de js -->
+    <script src="../../js/actualizar-producto.js" type="module"></script>
+
+    <!-- Script de Bootstrap5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>
