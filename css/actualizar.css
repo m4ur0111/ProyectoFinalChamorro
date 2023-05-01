@@ -1,3 +1,4 @@
+/* Estilos generales */
 *{
     font-family: 'Poppins', sans-serif;
 }
@@ -25,32 +26,7 @@ h1{
     grid-template-rows: auto;
 }
 
-.boton-producto{
-    padding: 1.5rem;
-    margin: 2rem;
-    width: 180px;
-    border-radius: 12px;
-    font-size: 18px;
-    border: none;
-    background: rgb(129,171,44);
-    background: linear-gradient(90deg, rgba(129,171,44,0.7819502801120448) 0%, rgba(139,168,80,0.7819502801120448) 100%);
-    cursor: pointer;
-}
 
-.boton-inicio{
-    background-image: linear-gradient(to right bottom, #0a47a1, #0079be, #00a2b0, #4bc494, #c4de8a);
-    padding: 1.5rem;
-    width: 190px;
-    border-radius: 12px;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-}
-
-.boton-inicio a{
-    text-decoration: none;
-    color: black;
-}
 
 /* CSS de la pagina de actualizacion */
 p{
@@ -90,24 +66,150 @@ p{
     gap: 3rem;
 }
 
+.titulo-listado{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-size: 52px;
+    font-weight: 300;
+}
+
+/* Estilos de la tabla de productos */
+.contenedor-tabla{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #1C2833;
+    color: white;
+    font-weight: 200;
+    font-size: 22px;
+}
+
+tr{
+    background-color:#E5E7E9;
+    font-size: 18px;
+}
+
+tr:nth-child(even) {
+    background-color: #F8F9F9;
+}
+
+.buscar{
+    font-size: 24px;
+    font-weight: 300;
+}
+
+label{
+    font-size: 18px;
+}
+
+#busqueda {
+    padding: 6px;
+    margin-right: 6px;
+    margin-bottom: 20px;
+}
+
+.contenedor-buscar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+}
+
+tbody tr {
+    display: table-row;
+}
+
+tbody tr.hidden {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+p{
+    font-size: 24px;
+    margin-top: 15px;
+}
+
+.icono-editar{
+    font-size: 22px;
+    cursor: pointer;
+    color: rgb(179,71,71);
+    color: linear-gradient(#ff7f49 0, #ff6f46 16.67%, #fe5942 33.33%, #f23c3c 50%, #e50b37 66.67%, #db0036 83.33%, #d20038 100%);
+    cursor: pointer;
+}
+
+/* Estilos del boton volver */
+.contenedor-boton-inicio{
+    margin-bottom: 50px;
+}
+
+.boton-inicio{
+    background-image: linear-gradient(to right bottom, #0a47a1, #0079be, #00a2b0, #4bc494, #c4de8a);
+    padding: 1.5rem;
+    border-radius: 12px;
+    font-size: 22px;
+    width: auto;
+    margin-top: 50px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.boton-inicio:hover{
+    color: black;
+    text-decoration: none;
+}
+
 button{
     padding: 1.5rem;
     border-radius: 12px;
-    font-size: 18px;
+    font-size: 22px;
+    width: auto;
+    margin-top: 50px;
     border: none;
     background: rgb(129,171,44);
     background: linear-gradient(90deg, rgba(129,171,44,0.7819502801120448) 0%, rgba(139,168,80,0.7819502801120448) 100%);
     cursor: pointer;
 }
 
-a{
-    text-decoration: none;
-    color: black;
-    padding: 1.5rem;
-    border-radius: 12px;
-    font-size: 18px;
-    border: none;
-    background: rgb(129,171,44);
-    background: linear-gradient(90deg, rgba(129,171,44,0.7819502801120448) 0%, rgba(139,168,80,0.7819502801120448) 100%);
-    cursor: pointer;
+/* Estilos para cuando un producto no se encuentra */
+tbody tr {
+    display: table-row;
+}
+
+tbody tr.hidden {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.contenedor-error-texto{
+    margin-bottom: 50px;
+}
+
+p{
+    font-size: 24px;
 }

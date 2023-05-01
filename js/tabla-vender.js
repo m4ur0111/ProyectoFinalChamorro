@@ -1,14 +1,7 @@
 //Importo la funcion que me da los datos actuales del array
-import { eliminarProducto } from "./funciones.js";
-//Importo la funcion que me da los datos actuales del array
 import { obtenerListaProductos } from "./funciones.js";
 
-////////// Llamo a la funcion calcularGanancias() que muestra los textos en la pagina de gastos cuando cargue //////////
-window.addEventListener('load', function() {
-    //llamo a mi función
-    eliminarProducto();
-});
-
+/////////////////////////////////////////////////////
 //almaceno mi array guardado en el localstorage
 let productos = obtenerListaProductos();
 
@@ -19,22 +12,32 @@ let productoSeleccionado;
 for (let producto of productos) {
     let fila = document.createElement('tr');
     let celdaNombre = document.createElement('td');
+    let celdaStock = document.createElement('td');
+    let celdaPorcentaje = document.createElement('td');
     let celdaIcono = document.createElement('td');
 
     //almaceno el nombre del producto a su variable
     celdaNombre.textContent = producto.nombre;
+    celdaStock.textContent = producto.stock;
+    celdaPorcentaje.textContent = producto.porcentaje;
 
     //creo una clase para mostrar el icono que me permita editar el producto que contenga menos de 3 existencias
     let icono = document.createElement("i");
-    icono.classList.add("far", "fa-trash-can");
-    icono.classList.add('icono-eliminar');
-    icono.setAttribute("id", "boton-eliminar" + producto.id); // agregar un identificador único para cada icono
+    icono.classList.add("far", "fa-credit-card");
+    icono.classList.add('icono-vender');
+    icono.setAttribute("id", "boton-reponer-" + producto.id); // agregar un identificador único para cada icono
+
+    //verifico cuanta cantidad de productos tiene cada elemento y en base a eso muestro un mensaje personalizado
 
     //Agrego un event listener al icono de edición
     icono.addEventListener("click", function() {
-        //Redirigo al usuario a la página "producto.html" con el parámetro "id" correspondiente
+        // Redirigir al usuario a la página "vender-form.html" con los parametros correspondientes
         productoSeleccionado = producto;
-        eliminarProducto(productoSeleccionado);
+        let nombreProducto = productoSeleccionado.nombre;
+        let stockProducto = productoSeleccionado.stock;
+        let porcentajeProducto = productoSeleccionado.porcentaje;
+        let precioProducto = productoSeleccionado.precio;
+        location.href = `../../html/vender/vender-form.html?nombreProducto=${nombreProducto}&stockProducto=${stockProducto}&porcentajeProducto=${porcentajeProducto}&precioProducto=${precioProducto}`;
     });
 
     celdaIcono.appendChild(icono);
@@ -43,6 +46,8 @@ for (let producto of productos) {
 
     //se genera la fila con el producto correspondiente
     fila.appendChild(celdaNombre);
+    fila.appendChild(celdaStock);
+    fila.appendChild(celdaPorcentaje);
     fila.appendChild(celdaIcono);
     tbody.appendChild(fila);
 }
@@ -90,5 +95,3 @@ inputBusqueda.addEventListener("keyup", function() {
             mensajeBusqueda.classList.add("hidden");
         }
 });
-
-

@@ -1,3 +1,4 @@
+/* Estilosd el body */
 *{
     font-family: 'Poppins', sans-serif;
 }
@@ -11,6 +12,7 @@ body{
     text-align: center;
 }
 
+/* Estilos del titulo */
 .titulo{
     text-align: center;
     margin-top: 50px;
@@ -19,6 +21,7 @@ body{
     font-weight: 300;
 }
 
+/* Estilos de la tabla con los datos de los productos */
 .contenedor-tabla{
     display: flex;
     justify-content: center;
@@ -57,23 +60,52 @@ tr:nth-child(even) {
     padding-bottom: 3rem;
 }
 
-a{
-    text-decoration: none;
-    color: black;
-    padding: 1.5rem;
-    border-radius: 12px;
-    font-size: 22px;
-    width: 150px;
-    margin-top: 50px;
-    border: none;
-    background: rgb(129,171,44);
-    background: linear-gradient(90deg, rgba(129,171,44,0.7819502801120448) 0%, rgba(139,168,80,0.7819502801120448) 100%);
-    cursor: pointer;
-    padding-bottom: 25px;
-}
-
+/* Estilos de los textos con informacion de los productos */
 .textos{
     text-align: center;
     font-size: 24px;
     padding-bottom: 15px;
+}
+
+/* Graficos con los datos de los productos */
+.contenedor-grafico{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 70px;
+}
+
+.titulo-grafico{
+    font-size: 34px;
+    font-weight: 300;
+}
+
+.grafico{
+    max-width: 900px;
+    max-height: 400px;
+}
+
+.grafico-ventas{
+    max-width: 900px;
+    max-height: 400px;
+}
+
+/* Estilos del boton de inicio */
+.boton-inicio{
+    background-image: linear-gradient(to right bottom, #0a47a1, #0079be, #00a2b0, #4bc494, #c4de8a);
+    padding: 1.5rem;
+    border-radius: 12px;
+    font-size: 22px;
+    width: auto;
+    margin-bottom: 50px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.boton-inicio a{
+    text-decoration: none;
+    color: black;
 }

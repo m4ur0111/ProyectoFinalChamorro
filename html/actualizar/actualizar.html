@@ -18,12 +18,16 @@
 </head>
 <body>
 
+    <!-- Titulo -->
     <h1 class="titulo">Actualizar Producto</h1>
 
+    <!-- Textos que contienen la informacion del producto a actualizar -->
     <p>El producto a actualizar es: <span class="texto-variable" id="productos-actualizar"></span></p>
     <p>El stock actual del producto es: <span class="texto-variable" id="stock-actualizar"></span></p>
+    <p>El precio de compra por unidad del producto es : <span class="texto-variable" id="compra-actualizar"></span>$</p>
     <p>El porcentaje de ganancia actual de producto es: <span class="texto-variable" id="porcentaje-actualizar"></span>%</p>
 
+    <!-- Formulario para ingresar los nuevos valores -->
     <div class="contenedor-formulario">
         <form class="formulario" id="formulario-actualizar">
             <div class="form-floating mb-3">
@@ -31,11 +35,15 @@
                 <label for="floatingInput">Nuevo stock del Producto (unidades)</label>
             </div>
             <div class="form-floating mb-3">
+                <input type="number" id="compra" class="form-control" placeholder="Precio de Compra" min="1">
+                <label for="floatingInput">Nuevo precio de compra del Producto (por unidad):</label>
+            </div>
+            <div class="form-floating mb-3">
                 <input type="number" id="porcentaje" class="form-control" placeholder="Porcentaje de venta" min="0">
                 <label for="floatingInput">Nuevo porcentaje de ganancia esperado:</label>
             </div>
             <div class="contenedor-botones">
-                <a href="./botones-actualizar.html">Volver</a>
+                <a href="./tabla-actualizar.html" class="boton-inicio">Volver</a>
                 <button id="boton-actualizar" type="submit">Actualizar Producto</button>
             </div>
         </form>

@@ -10,42 +10,59 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Link para subir un archivo excel y cargar productos -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
     <!-- Link de SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Link de Notyf -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
     <!-- Link archivo de CSS -->
     <link rel="stylesheet" href="../css/agregar.css">
     <title>Agregar Producto</title>
 </head>
 <body>
 
+    <!-- Titulo -->
     <h1 class="titulo">Agregar Producto</h1>
 
+    <!-- Contenedor para agregar el producto con sus valores -->
     <div class="contenedor-formulario">
         <form class="formulario" id="formulario-productos">
-            <div class="form-floating mb-3">
+            <div class="form-floating mb-3 contenedor-form-datos">
                 <input type="text" id="nombre" class="form-control" placeholder="Nombre Producto" autocomplete="off">
                 <label for="floatingInput">Nombre del Producto</label>
             </div>
-            <div class="form-floating mb-3">
+            <div class="form-floating mb-3 contenedor-form-datos">
                 <input type="number" id="stock" class="form-control" placeholder="Stock del Producto" min="1">
                 <label for="floatingInput">Stock del Producto (unidades)</label>
             </div>
-            <div class="form-floating mb-3">
+            <div class="form-floating mb-3 contenedor-form-datos">
                 <input type="number" id="precio" class="form-control" placeholder="Precio del Producto" min="1">
                 <label for="floatingInput">Valor por el cual compro cada producto</label>
             </div>
-            <div class="form-floating mb-3">
+            <div class="form-floating mb-3 contenedor-form-datos">
                 <input type="number" id="porcentaje" class="form-control" placeholder="Porcentaje de venta" min="0">
                 <label for="floatingInput">porcentaje de ganancia esperado por todos los productos:</label>
             </div>
-            <a href="../index.html">Volver</a>
-            <button id="boton-agregar" type="submit">Agregar Producto</button>
+            <!-- Contenedor de botones y carga de excel -->
+            <div class="contenedor-botones">
+                <a href="../index.html">Volver</a>
+                <button id="boton-agregar" type="submit">Agregar Producto</button>
+                <div class="input-excel">
+                    <label for="subir-excel" class="titulo-input">Seleccione un archivo de Excel (.xlsx, .xls)</label>    
+                    <input type="file" id="subir-excel" accept=".xlsx, .xls, application/vnd.ms-excel">
+                </div>
+            </div>
         </form>
     </div>
 
-    <!-- Link al script de js -->
-    <script src="../app.js" type="module"></script>
 
+
+    <!-- Script de Notyf -->
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <!-- Link al script de js -->
+    <script src="../js/agregar.js" type="module"></script>
+    <script src="../js/funciones.js" type="module"></script>
     <!-- Script de Bootstrap5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>

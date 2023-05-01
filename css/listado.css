@@ -1,3 +1,4 @@
+/* Estilos del body */
 *{
     font-family: 'Poppins', sans-serif;
 }
@@ -11,6 +12,7 @@ body{
     text-align: center;
 }
 
+/* Estilos de la tabla */
 .titulo-listado{
     text-align: center;
     margin-top: 50px;
@@ -22,13 +24,8 @@ body{
 .contenedor-tabla{
     display: flex;
     justify-content: center;
+    width: 100%;
     align-items: center;
-}
-
-table {
-    width: 70%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
 }
 
 th, td {
@@ -42,6 +39,7 @@ th {
     color: white;
     font-weight: 200;
     font-size: 22px;
+    padding: 1rem;
 }
 
 tr{
@@ -51,13 +49,22 @@ tr{
 
 tr:nth-child(even) {
     background-color: #F8F9F9;
+} 
+
+/* Estilos de los botones de volver y descargar */
+.contenedor-botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin-bottom: 50px;
 }
 
 button{
     padding: 1.5rem;
     border-radius: 12px;
     font-size: 22px;
-    width: 150px;
+    width: auto;
     margin-top: 50px;
     border: none;
     background: rgb(129,171,44);
@@ -65,11 +72,39 @@ button{
     cursor: pointer;
 }
 
+.descargar-boton {
+    margin-left: 4rem;
+}
+
+.descargar-boton i {
+    margin-left: 5px;
+    padding: 2px;
+}
+
 button a{
     text-decoration: none;
     color: black;
 }
 
+.boton-volver{
+    background-image: linear-gradient(to right bottom, #0a47a1, #0079be, #00a2b0, #4bc494, #c4de8a);
+    padding: 1.5rem;
+    border-radius: 12px;
+    font-size: 22px;
+    width: auto;
+    margin-top: 50px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.boton-volver:hover{
+    color: black;
+    text-decoration: none;
+}
+
+/* Estilos de los textos del control de stock */
 .stock-ok{
     color: #17ab7d;
     font-size: 22px;
@@ -86,4 +121,71 @@ button a{
     color: #c8294d;
     font-size: 22px;
     font-weight: 300;
+    margin-right: 15px;
+}
+
+.stock-reponer div {
+    font-size: 1.2rem;
+    color: red;
+}
+
+.stock-reponer i{
+    color: rgb(179,71,71);
+    color: linear-gradient(90deg, rgba(179,71,71,1) 0%, rgba(217,71,71,1) 100%);
+    cursor: pointer;
+}
+
+.stock-reponer span {
+    color: #c8294d;
+    font-size: 22px;
+    font-weight: 300;
+    margin-right: 15px;
+}
+
+#boton-comparar{
+    color: #0090e4;
+    color: linear-gradient(#97dbff 0, #70c8f9 25%, #3cb5f2 50%, #00a2eb 75%, #0090e4 100%);
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Estilos de la barra de busqueda de productos */
+.buscar{
+    font-size: 24px;
+    font-weight: 300;
+}
+
+label{
+    font-size: 18px;
+}
+
+#busqueda {
+    padding: 6px;
+    margin-right: 6px;
+    margin-bottom: 20px;
+}
+
+.contenedor-buscar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos del texto por si no se encuentra */
+tbody tr {
+    display: table-row;
+}
+
+tbody tr.hidden {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+p{
+    font-size: 24px;
+    margin-top: 15px;
 }

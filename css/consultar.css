@@ -1,4 +1,4 @@
-/* Estilos del body */
+/* Estilos generales del body */
 *{
     font-family: 'Poppins', sans-serif;
 }
@@ -12,27 +12,32 @@ body{
     text-align: center;
 }
 
-/* Estilos del titulo */
-h1{
-    font-size: 40px;
+/* Textos */
+.titulo-comparar{
     font-weight: 300;
+    font-size: 48px;
     margin-top: 50px;
 }
 
-/* Elementos del main con tabla y textos */
-.titulo-listado{
+.textos{
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 25px;
-    font-size: 52px;
+    font-size: 24px;
+    padding: 1rem;
+}
+
+p{
     font-weight: 300;
 }
 
+span{
+    font-weight: 400;
+}
+
+/* Estilos de la tabla */
 .contenedor-tabla{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
 }
 
 table {
@@ -63,69 +68,26 @@ tr:nth-child(even) {
     background-color: #F8F9F9;
 }
 
-.buscar{
-    font-size: 24px;
-    font-weight: 300;
+/* Boton volver */
+.contenedor-botones{
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 
-label{
-    font-size: 18px;
-}
-
-#busqueda {
-    padding: 6px;
-    margin-right: 6px;
-    margin-bottom: 20px;
-}
-
-.contenedor-buscar{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: blue;
-}
-
-tbody tr {
-    display: table-row;
-}
-
-tbody tr.hidden {
-    display: none;
-}
-
-.hidden {
-    display: none;
-}
-
-p{
-    font-size: 24px;
-    margin-top: 15px;
-}
-
-.icono-eliminar{
-    font-size: 24px;
-    cursor: pointer;
-    color: rgb(179,71,71);
-    color: linear-gradient(#ff7f49 0, #ff6f46 16.67%, #fe5942 33.33%, #f23c3c 50%, #e50b37 66.67%, #db0036 83.33%, #d20038 100%);
-    cursor: pointer;
-}
-
-/* Estilos del boton de inicio */
-.boton-inicio{
+.boton-volver{
     background-image: linear-gradient(to right bottom, #0a47a1, #0079be, #00a2b0, #4bc494, #c4de8a);
     padding: 1.5rem;
     border-radius: 12px;
     font-size: 22px;
     width: auto;
-    margin-bottom: 50px;
+    margin-top: 50px;
     border: none;
     cursor: pointer;
     text-decoration: none;
     color: black;
 }
 
-.boton-inicio a{
-    text-decoration: none;
+.boton-volver:hover{
     color: black;
+    text-decoration: none;
 }

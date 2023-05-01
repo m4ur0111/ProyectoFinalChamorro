@@ -55,8 +55,7 @@ function venderProducto(cantidad, venta, stockProducto, nombreProducto) {
         })
         return;
     }
-
-    if (stockProducto < cantidad) {
+    if (parseInt(cantidad) > parseInt(stockProducto)) {
         Swal.fire({
             position: 'center',
             icon: 'warning',
@@ -78,7 +77,10 @@ function venderProducto(cantidad, venta, stockProducto, nombreProducto) {
         if (nombreProducto === nombres[i]){
                 // mueve esta línea de código aquí dentro del if
                 productos[i].stock -= cantidad;
-            
+                //asigno la ganancia del producto
+                let gananciaProducto = cantidad * venta;
+                productos[i].ganancia += Number(gananciaProducto);
+
                 //almaceno mi nuevo array en el localstorage
                 localStorage.setItem('productosLista', JSON.stringify(productos));
 

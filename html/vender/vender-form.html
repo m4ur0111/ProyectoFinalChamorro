@@ -18,13 +18,16 @@
 </head>
 <body>
 
+    <!-- Titulo -->
     <h1 class="titulo">Vender Producto</h1>
 
+    <!-- Textos con informacion del producto a vender -->
     <p>El producto a vender es: <span class="texto-variable" id="productos-vender"></span></p>
     <p>El stock actual del producto es: <span class="texto-variable" id="stock-vender"></span></p>
     <p>El porcentaje de ganancia actual de producto es: <span class="texto-variable" id="porcentaje-vender"></span>%</p>
     <p>El precio aproximado de venta por unidad es de: <span class="texto-variable" id="ventaaprox-vender"></span>$</p>
 
+    <!-- Contenedor del formulario para agregar las variables -->
     <div class="contenedor-formulario">
         <form class="formulario" id="formulario-vender">
             <div class="form-floating mb-3">
@@ -36,7 +39,7 @@
                 <label for="floatingInput">Valor del producto por unidad:</label>
             </div>
             <div class="contenedor-botones">
-                <a href="./vender.html">Volver</a>
+                <a href="./vender.html" class="boton-inicio">Volver</a>
                 <button id="boton-actualizar" type="submit">Vender Producto</button>
             </div>
         </form>

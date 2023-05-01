@@ -1,3 +1,4 @@
+/* Estilos generales del body */
 *{
     font-family: 'Poppins', sans-serif;
 }
@@ -11,16 +12,7 @@ body{
     text-align: center;
 }
 
-p{
-    font-size: 24px;
-    font-weight: 300;
-}
-
-.texto-variable{
-    font-size: 24px;
-    font-weight: 400;
-}
-
+/* Estilos del titulo */
 .titulo{
     text-align: center;
     margin-top: 80px;
@@ -29,23 +21,33 @@ p{
     font-weight: 300;
 }
 
+/* Estilos del formulario para agregar productos */
 .contenedor-formulario{
     display: flex;
     justify-content: center;
     align-content: center;
 }
 
-.formulario{
+.contenedor-form-datos{
     width: 600px;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 1rem;
 }
 
+/* Estilos de los botones */
 .contenedor-botones{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
+    height: 200px;
+    gap: 2rem;
 }
 
 button{
@@ -59,13 +61,42 @@ button{
 }
 
 a{
-    text-decoration: none;
-    color: black;
+    background-image: linear-gradient(to right bottom, #0a47a1, #0079be, #00a2b0, #4bc494, #c4de8a);
     padding: 1.5rem;
+    width: 190px;
     border-radius: 12px;
     font-size: 18px;
     border: none;
-    background: rgb(129,171,44);
-    background: linear-gradient(90deg, rgba(129,171,44,0.7819502801120448) 0%, rgba(139,168,80,0.7819502801120448) 100%);
+    list-style: none;
+    color: black;
+    text-decoration: none;
     cursor: pointer;
 }
+
+/* Estilos del input para cargar el archivo */
+.input-excel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-input{
+    font-size: 20px;
+    font-weight: 400;
+    display: inline-block;
+    background: #44A08D;
+    background: -webkit-linear-gradient(to right, #093637, #44A08D);
+    background: linear-gradient(to right, #093637, #44A08D); 
+    color: white;
+    padding: 1.5rem 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+    border: none;
+}
+
+input[type="file"] {
+    display: none;
+}
+

@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link de ChartJS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Link de estilos CSS -->
     <link rel="stylesheet" href="../css/gastos.css">
     <title>Gastos y Ganancias</title>
 </head>
 <body>
 
+    <!-- Titulo -->
     <h1 class="titulo">Ganancia Esperada por Producto</h1>
 
+    <!-- Tabla con los datos de los productos -->
     <div class="contenedor-tabla">
         <table>
             <thead>
             <tr>
                 <th>Nombre</th>
                 <th>Ganancias Esperadas</th>
+                <th>Ganancias de</th>
             </tr>
             </thead>
             <tbody>
@@ -26,15 +31,27 @@
         </table>
     </div>
 
+    <!-- Textos de datos sobre los productos generales -->
     <div class="textos">
         <p>La ganancia total esperada entre todos los productos es de: <span id="ganancia-total"></span></p>
         <p>El gasto total entre todos los productos es de: <span id="gasto-total"></span></p>
         <p>La ganancia real esperada descontando el total gastado es: <span id="ganancia-real"></span></p>
     </div>
 
-    <div class="volver-a">
-        <a href="../index.html">Volver</a>
+    <!-- Grafico por ganancias esperadas -->
+    <div class="contenedor-grafico">
+        <h2 class="titulo-grafico">GANANCIAS ESPERADAS POR PRODUCTO</h2>
+        <canvas id="grafico-ganancias" class="grafico"></canvas>
     </div>
+
+    <!-- Grafico por ganancias de ventas -->
+    <div class="contenedor-grafico">
+        <h2 class="titulo-grafico">GANANCIAS DE VENTAS POR PRODUCTO</h2>
+        <canvas id="grafico-ventas" class="grafico-ventas"></canvas>
+    </div>
+
+    <!-- Boton inicio -->
+    <a href="../../index.html"><button class="boton-inicio">Volver al Inicio</button></a>
 
     <!-- Link del archivo script -->
     <script src="../js/ganancias.js" type="module"></script>
